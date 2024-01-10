@@ -1,0 +1,89 @@
+* {
+    transparent: #02001CE0; 
+    foreground: #F2F2F2EE;
+    background-active: #827b67;
+    background-white: #060042FF; 
+    background-black: #00000000;
+    urgent: #E91E6366;
+    urgent-selected: #E91E6377;
+}
+
+window {
+    transparency: "real";
+    background-color: #02001CE0; 
+    text-color: #6e6a86;
+    location: center;
+    anchor: center;
+    x-offset: 5px;
+    y-offet: -50px;
+    height: 40%;
+    width: 300px;
+    border-radius: 3px;
+    orientation: vertical;
+}
+
+prompt {
+    enabled: false;
+}
+
+listview {
+    background-color: @transparent;
+    spacing: 0;
+    cycle: true;
+    dynamic: true;
+    scrollbar: true;
+}
+
+mainbox {
+    border-radius: 5px;
+    width: 200px;
+    expand: true;
+    spacing: 12px;
+    padding: 5px;
+    background-color: @background-black;
+    children: [ listview ];
+}
+
+scrollbar {
+    background-color: @background-white;
+    handle-width: 0;
+    margin: 0 0 5px 0;
+    border-radius: 9px;
+}
+
+element {
+    background-color: @transparent;
+    text-color: @foreground;
+    orientation: vertical;
+    border: 1px solid;
+    border-color: @background-white;
+    border-radius: 5px;
+    spacing: 4px;
+    margin: 0px 12px 0px 12px;
+    padding: 10px;
+    width: 100%;
+
+}
+
+element-text {
+    font: "Sauce Code Pro Nerd Font 12";
+    expand: true;
+    horizontal-align: 0;
+    vertical-align: 0.5;
+    color: #e6e6e6;
+    background-color: transparent;
+}
+
+element normal.urgent,
+element alternate.urgent {
+    background-color: @urgent;
+    text-color: @foreground;
+    border-radius: 9px;
+}
+
+element normal.active,
+element alternate.active {
+    background-color: @background-active;
+    text-color: @foreground;
+}
+
